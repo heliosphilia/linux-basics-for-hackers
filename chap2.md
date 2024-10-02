@@ -12,11 +12,22 @@
 
 ### Numbering the lines
 **nl *diretory of filename*** : display a file with line numbers
-    Ex: nl /etc/snort/snort.conf
+    
+   Ex: nl /etc/snort/snort.conf
     
 ### Filtering text with grep
 cat *diretory of filename* | grep *content* : filter the content of a file for display.
-Ex: cat /etc/snort/snort.conf | grep output
-    > see all lines that include the word output in *snort.conf*
-
    
+   Ex: cat /etc/snort/snort.conf | grep output
+   
+   > see all lines that include the word output in *snort.conf*
+
+### Using sed to find and replace
+**sed** : search for occurrences of a word or a text pattern and then perform some action on it
+
+- Step 1: search for *mysql* in the *snort.conf* using *grep*
+  cat /etc/snort/snort.conf | grep mysql
+
+- Step 2: replace every occurrence of *mysql* with *MySQL*, then save newfile to snort2.conf
+  sed s/mysql/MySQL/g /etc/snort/snort.conf > snort2.conf
+  **Note:** *s* command performs the search (mysql) and *g* command tells Linux that you want the replacement performed globally.
