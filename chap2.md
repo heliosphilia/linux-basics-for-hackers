@@ -26,8 +26,11 @@ cat *diretory of filename* | grep *content* : filter the content of a file for d
 **sed** : search for occurrences of a word or a text pattern and then perform some action on it
 
 - Step 1: search for *mysql* in the *snort.conf* using *grep*
+
   cat /etc/snort/snort.conf | grep mysql
 
 - Step 2: replace every occurrence of *mysql* with *MySQL*, then save newfile to snort2.conf
+
   sed s/mysql/MySQL/g /etc/snort/snort.conf > snort2.conf
+
   **Note:** *s* command performs the search (mysql) and *g* command tells Linux that you want the replacement performed globally.
