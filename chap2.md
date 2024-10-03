@@ -34,3 +34,27 @@ cat *diretory of filename* | grep *content* : filter the content of a file for d
   sed s/mysql/MySQL/g /etc/snort/snort.conf > snort2.conf
 
   **Note:** *s* command performs the search (mysql) and *g* command tells Linux that you want the replacement performed globally.
+
+   + If you want to replace only the first occurrence of the term mysql, leaving out the trailing g command.
+
+   Ex: sed s/mysql/MySQL snort.conf > snort2.conf
+
+   + Find and replace any *specific* occurrence of a word.
+
+   Ex: sed s/mysql/MySQL/2 snort.conf > snort2.conf
+
+   > Only the second occurrence of the world mysql
+
+### Viewing files with more and less
+**1. Controlling the Display with more**
+**more** command displays a page of a file at a time and lets you page down through it using the ENTER key.
+
+Ex: more /etc/snort/snort.conf
+
+**2. Displaying and Filtering with less**
+- **less** command is very similar to more, and you can also filter it for terms.
+
+Ex: less /etc/snort/snort.conf
+
+- If you press **/*content***, *less* will let you search for terms in the file.
+
