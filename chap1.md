@@ -28,7 +28,7 @@ The root (/) of the filesystem is at the top of the tree, and the following are 
 
 **/mnt** where other filesystem are attached and mounted to the filesystem
 
-**/media** where CDs and USB devices are atteched and mounte the filesysye
+**/media** where CDs and USB devices are atteched and mounted the filesystem
 
 **/bin** where application binaries reside
 
